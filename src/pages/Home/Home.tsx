@@ -26,6 +26,9 @@ const Home: React.FC = () => {
       <div className={`${styles.sidenav} ${isSidenavOpen ? styles.sidenavOpen : ''}`}>
         <Navbar onLinkClick={() => setIsSidenavOpen(false)} />
       </div>
+
+      {isSidenavOpen && <div className={styles.overlay} onClick={toggleSidenav} />}
+
       <main className={styles.main}>
         <section className={styles.hero}>
           <h1 className={styles.heroTitle}>Timeless Elegance</h1>
