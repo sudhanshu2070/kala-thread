@@ -1,18 +1,33 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import styles from './Navbar.module.css';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => (
-  <nav className={styles.navbar}>
-    <ul>
-      <li><Link to="/projects">Projects</Link></li>
-      <li><Link to="/art-pieces">Art Pieces</Link></li>
-      <li><Link to="/paris-fashion-week">Paris Fashion Week</Link></li>
-      <li><Link to="/copenhagen-fashion-week">Copenhagen Fashion Week</Link></li>
-      <li><Link to="/cv">CV</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
-    </ul>
-  </nav>
-);
+interface NavbarProps {
+  onLinkClick?: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onLinkClick }) => {
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Services', path: '/services' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  return (
+    <nav className={styles.nav}>
+      <ul className={styles.navList}>
+        {navItems.map((item) => (
+          <li key={item.name} className={styles.navItem}>
+            <Link to={item.path} className={styles.navLink} onClick={onLinkClick}>
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
 export default Navbar;
