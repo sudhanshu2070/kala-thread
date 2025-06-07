@@ -52,7 +52,7 @@
   top: 0;
   right: 0;
   height: 100vh;
-  width: 100vw;
+  width: 50vw;
   background-color: rgba(255, 255, 255, 0.95);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -60,6 +60,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .sidenavOpen {
@@ -126,6 +128,11 @@
     font-size: 1.4rem;
   }
 
+  .sidenav {
+    width: 60vw; /* Slightly wider for tablets */
+    padding: 1.5rem;
+  }
+
   .heroTitle {
     font-size: 2.5rem;
   }
@@ -150,6 +157,11 @@
 
   .hamburger {
     font-size: 1.3rem;
+  }
+
+  .sidenav {
+    width: 80vw; /* Wider for small screens to ensure usability */
+    padding: 1rem;
   }
 
   .heroTitle {
