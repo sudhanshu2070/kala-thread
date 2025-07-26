@@ -8,9 +8,6 @@ export default defineConfig({
       localsConvention: 'camelCase',
     },
   },
-  esbuild: {
-    loader: { '.js': 'jsx' },
-  },
   build: {
     outDir: 'dist',
   },
