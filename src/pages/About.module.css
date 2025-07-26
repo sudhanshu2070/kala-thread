@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply container mx-auto py-12 px-4;
+}
+
+.title {
+  @apply text-4xl font-bold text-purple-900 text-center mb-8;
+}
+
+.content {
+  @apply flex flex-col md:flex-row items-center gap-8;
+}
+
+.image {
+  @apply w-64 h-64 rounded-full object-cover;
+}
+
+.description {
+  @apply text-gray-700 text-lg;
+}
+
+.subtitle {
+  @apply text-2xl font-semibold text-purple-900 mt-6;
+}
+
+.list {
+  @apply list-disc list-inside text-gray-700 mt-2;
+}

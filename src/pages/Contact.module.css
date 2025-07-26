@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply container mx-auto py-12 px-4;
+}
+
+.title {
+  @apply text-4xl font-bold text-purple-900 text-center mb-8;
+}
+
+.formContainer {
+  @apply max-w-lg mx-auto;
+}
+
+.form {
+  @apply space-y-4;
+}
+
+.input {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-900;
+}
+
+.textarea {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-900;
+}
+
+.button {
+  @apply w-full bg-purple-900 text-white p-3 rounded-lg hover:bg-yellow-400 hover:text-purple-900 transition;
+}
