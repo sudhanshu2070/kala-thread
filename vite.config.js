@@ -1,10 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import cssModules from 'vite-plugin-css-modules';
 
 export default defineConfig({
-  plugins: [react(), cssModules()],
+  plugins: [react()],
+  css: {
+    modules: {
+      localsConvention: 'camelCase',
+    },
+  },
+  esbuild: {
+    loader: { '.js': 'jsx' },
+  },
   build: {
-    outDir: 'dist'
-  }
+    outDir: 'dist',
+  },
 });

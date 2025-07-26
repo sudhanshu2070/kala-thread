@@ -1,43 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .navbar {
-  @apply bg-gradient-to-r from-purple-900 to-indigo-900 text-white p-4 sticky top-0 z-50;
+  background: linear-gradient(to right, #4c1d95, #312e81);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .container {
-  @apply container mx-auto flex justify-between items-center;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  @apply text-2xl font-bold tracking-wide;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .menuButton {
-  @apply md:hidden;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
 }
 
 .button {
-  @apply focus:outline-none;
+  outline: none;
 }
 
 .icon {
-  @apply w-6 h-6;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .navLinks {
-  @apply absolute md:static top-16 left-0 w-full md:w-auto bg-purple-900 md:bg-transparent p-4 md:p-0 md:flex space-x-6 hidden;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  background: #4c1d95;
+  padding: 1rem;
+  display: none;
 }
 
 .navLinks.open {
-  @apply block;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    position: static;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
 }
 
 .navLink {
-  @apply block py-2 md:py-0 hover:text-yellow-400;
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navLink:hover {
+  color: #facc15;
+}
+
+@media (min-width: 768px) {
+  .navLink {
+    padding: 0;
+  }
 }
 
 .navLink.active {
-  @apply text-yellow-400;
+  color: #facc15;
 }

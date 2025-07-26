@@ -1,31 +1,56 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .container {
-  @apply container mx-auto py-12 px-4;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .title {
-  @apply text-4xl font-bold text-purple-900 text-center mb-8;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #4c1d95;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .content {
-  @apply flex flex-col md:flex-row items-center gap-8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
 }
 
 .image {
-  @apply w-64 h-64 rounded-full object-cover;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 9999px;
+  object-fit: cover;
 }
 
 .description {
-  @apply text-gray-700 text-lg;
+  color: #374151;
+  font-size: 1.125rem;
 }
 
 .subtitle {
-  @apply text-2xl font-semibold text-purple-900 mt-6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4c1d95;
+  margin-top: 1.5rem;
 }
 
 .list {
-  @apply list-disc list-inside text-gray-700 mt-2;
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #374151;
+  margin-top: 0.5rem;
 }

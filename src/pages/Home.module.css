@@ -1,23 +1,60 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .container {
-  @apply min-h-screen bg-gradient-to-b from-purple-100 to-white flex items-center justify-center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f3e8ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
-  @apply text-center px-4;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .title {
-  @apply text-5xl md:text-7xl font-extrabold text-purple-900;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4c1d95;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4.5rem;
+  }
 }
 
 .description {
-  @apply mt-4 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: #374151;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.25rem;
+  }
 }
 
 .button {
-  @apply mt-6 bg-purple-900 text-white px-6 py-3 rounded-full hover:bg-yellow-400 hover:text-purple-900 transition;
+  margin-top: 1.5rem;
+  background: #4c1d95;
+  color: white;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 9999px;
+}
+
+.button:hover {
+  background: #facc15;
+  color: #4c1d95;
+}
+
+.button {
+  transition: all 0.3s;
 }

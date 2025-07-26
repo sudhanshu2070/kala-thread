@@ -1,23 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .footer {
-  @apply bg-gray-900 text-white py-8;
+  background: #111827;
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .container {
-  @apply container mx-auto text-center;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .text {
-  @apply text-sm;
+  font-size: 0.875rem;
 }
 
 .socialLinks {
-  @apply flex justify-center space-x-4 mt-4;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .socialLink {
-  @apply hover:text-yellow-400;
+  color: white;
+}
+
+.socialLink:hover {
+  color: #facc15;
 }
